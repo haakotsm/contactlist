@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">s929559_oblig2</string>
+    <string name="menu_insert">Insert</string>
+    <string name="menu_delete">Delete</string>
+    <string name="insert_fornavn">Fornavn:</string>
+    <string name="insert_etternavn">Etternavn:</string>
+    <string name="insert_tlf">Tlf nummer:</string>
+    <string name="contact_info">Info om denne personen</string>
+</resources>
