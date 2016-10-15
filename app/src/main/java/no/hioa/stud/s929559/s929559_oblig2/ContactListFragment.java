@@ -50,6 +50,7 @@ public class ContactListFragment extends ListFragment implements InsertDialogFra
             cur = db.finnalle();
         }
         if (cur.moveToFirst()) {
+            ContactHandler.setNull();
             LinkedList<Contact> contacts = ContactHandler.getInstance();
             do {
                 int id = cur.getInt(cur.getColumnIndexOrThrow(BaseColumns._ID));
@@ -66,7 +67,7 @@ public class ContactListFragment extends ListFragment implements InsertDialogFra
         cur = db.finnalle();
         lca = new ListCursorAdapter(getActivity().getBaseContext(), cur);
         getListView().setDivider(getActivity().getResources().getDrawable(R.drawable.divider));
-        getListView().setDividerHeight(10);
+        getListView().setDividerHeight(6);
         setListAdapter(lca);
     }
 

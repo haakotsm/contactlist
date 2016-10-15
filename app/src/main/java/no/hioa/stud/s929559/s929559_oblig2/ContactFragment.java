@@ -29,4 +29,5 @@ public class ContactFragment extends Fragment {
     public void onViewCreated(View view, @Nullable Bundle args) {
         super.onViewCreated(view, args);
     }
+
 }

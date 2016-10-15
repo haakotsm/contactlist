@@ -6,4 +6,5 @@
     <string name="insert_etternavn">Etternavn:</string>
     <string name="insert_tlf">Tlf nummer:</string>
     <string name="contact_info">Info om denne personen</string>
+    <string name="contact_image">Contact image</string>
 </resources>

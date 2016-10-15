@@ -3,22 +3,39 @@
     android:layout_width="match_parent"
     android:layout_height="?attr/listPreferredItemHeight"
     android:background="@drawable/contact_item_background"
-    android:orientation="vertical"
-    android:paddingTop="1dp"
+    android:orientation="horizontal"
+    android:paddingBottom="7dp"
     android:paddingEnd="5dp"
     android:paddingStart="3dp"
-    android:paddingBottom="7dp">
+    android:paddingTop="1dp">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:padding="4dp"
         android:background="@color/white">
 
-        <LinearLayout
-            android:layout_width="match_parent"
+        <FrameLayout
+            android:id="@+id/contact_image"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:background="@drawable/stroke_box">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/circle_image"
+                android:contentDescription="@string/contact_image"
+                android:src="@mipmap/contact_icon" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/name_date_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_toEndOf="@id/contact_image"
+            android:background="@drawable/stroke_box"
             android:orientation="horizontal">
 
             <TextView
@@ -27,6 +44,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight=".65"
                 android:maxLines="1"
+                android:paddingEnd="3dp"
+                android:paddingStart="3dp"
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
@@ -36,16 +55,32 @@
                 android:layout_height="wrap_content"
                 android:layout_weight=".35"
                 android:maxLines="1"
+                android:paddingEnd="3dp"
+                android:paddingStart="3dp"
                 android:textColor="@color/black"
                 android:textSize="16sp" />
         </LinearLayout>
 
-        <TextView
-            android:id="@+id/telefon"
-            android:layout_width="match_parent"
+        <LinearLayout
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:maxLines="1"
-            android:textColor="@color/black"
-            android:textSize="16sp" />
-    </LinearLayout>
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@id/name_date_container"
+            android:layout_toEndOf="@id/contact_image"
+            android:background="@drawable/stroke_box">
+
+            <TextView
+                android:id="@+id/telefon"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:paddingEnd="3dp"
+                android:paddingStart="3dp"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
 </LinearLayout>

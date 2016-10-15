@@ -11,14 +11,14 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
     ContactListFragment contactListFragment;
     FragmentManager fm;
-    ContactFragment contact;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         contactListFragment = new ContactListFragment();
-        contact = new ContactFragment();
+
         fm = getSupportFragmentManager();
         fm.beginTransaction().add(R.id.activity_main, contactListFragment, "ContactListFragment").commit();
 
@@ -49,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void showDetails(int index) {
+        ContactFragment contact = new ContactFragment();
         Bundle args = new Bundle();
         args.putInt("index", index);
         contact.setArguments(args);
